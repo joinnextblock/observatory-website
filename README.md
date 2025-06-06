@@ -57,6 +57,7 @@ Each moon cycle (4,032 blocks) is given a traditional name, creating a sequence 
 Our virtual sun operates on a grander scale, completing its cycle every 210,000 blocks - exactly one Bitcoin halving period. This solar cycle creates our seasons, with each phase lasting exactly 52,500 blocks. The halving events mark our spring equinoxes, creating a natural rhythm that has historically aligned with Bitcoin's price cycles.
 
 ### Solar Seasons
+
 | Emoji | Phase | Block Range | Description |
 |-------|-------|-------------|-------------|
 | 🌱 | Spring | 0 | Begins at Bitcoin halving blocks |
