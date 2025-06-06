@@ -1,6 +1,4 @@
-# The Observatory
-
-## Overview
+# Overview
 
 The Observatory is NextBlock City's celestial timekeeper, synchronizing our digital metropolis with the Bitcoin blockchain. Like an ancient astronomical observatory that tracked the movements of stars and planets, our Observatory tracks the rhythm of Bitcoin blocks, creating a unique temporal system that guides the city's operations.
 
@@ -18,14 +16,14 @@ Together, these elements create a unique temporal system that not only keeps tim
 
 
 
-### Celestial Cycles
+# Celestial Cycles
 
 The Observatory maintains a sophisticated celestial system that creates a unique temporal framework synchronized with the Bitcoin blockchain. This system consists of three main components: the Lunar Cycle, the Solar Cycle, and the Eclipse System.
 
-#### Lunar Cycle (Lunar Block)
+## Lunar Cycle (Lunar Block)
 Our virtual moon creates a lunar calendar that guides daily operations. Each moon cycle consists of 8 phases that complete every 4,032 blocks (two Bitcoin difficulty adjustments), with each phase lasting exactly 504 blocks. The genesis block (block 0) marks a full moon. A complete cycle consists of 13 named moons, from the Wolf Moon to the Blue Moon, each containing 8 phases.
 
-##### Moon Phases
+### Moon Phases
 | Emoji | Phase | Block Range | Description |
 |-------|-------|-------------|-------------|
 | 🌕 | Full Moon | 0, 4032, 8064, ... | Maximum illumination, marks the start of a new cycle |
@@ -37,7 +35,7 @@ Our virtual moon creates a lunar calendar that guides daily operations. Each moo
 | 🌓 | First Quarter | 2521-3024 | Half of the moon is illuminated |
 | 🌔 | Waxing Gibbous | 3025-4031 | Moon continues to increase in illumination |
 
-##### Named Moons
+### Named Moons
 Each moon cycle (4,032 blocks) is given a traditional name, creating a sequence of 13 moons that repeats throughout the Bitcoin blockchain. Remarkably, this sequence aligns perfectly with our seasons - each season contains approximately 13 moons (52,500 blocks ÷ 4,032 blocks ≈ 13.02 moons per season).
 
 | Emoji | Name | Description |
@@ -56,10 +54,10 @@ Each moon cycle (4,032 blocks) is given a traditional name, creating a sequence 
 | 🧊 | Cold Moon | December's full moon, named for winter's arrival |
 | 🌕 | Blue Moon | The 13th moon in our cycle, completing the lunar year |
 
-#### Solar Cycle (Bitcoin Year)
+## Solar Cycle (Bitcoin Year)
 Our virtual sun operates on a grander scale, completing its cycle every 210,000 blocks - exactly one Bitcoin halving period. This solar cycle creates our seasons, with each phase lasting exactly 52,500 blocks. The halving events mark our spring equinoxes, creating a natural rhythm that has historically aligned with Bitcoin's price cycles.
 
-##### Solar Seasons
+### Solar Seasons
 | Emoji | Phase | Block Range | Description |
 |-------|-------|-------------|-------------|
 | 🌱 | Spring | 0, 210000, 420000, ... | Begins at Bitcoin halving blocks |
@@ -67,10 +65,10 @@ Our virtual sun operates on a grander scale, completing its cycle every 210,000 
 | 🍂 | Autumn | 105000, 315000, ... | Transition to winter |
 | ❄️ | Winter | 157500, 367500, ... | Minimum solar activity |
 
-#### Eclipse System
+## Eclipse System
 The Eclipse System occurs at the midpoint of each Bitcoin Season - exactly 26,250 blocks after each season begins. These eclipse events happen at blocks 26,250, 78,750, 131,250, 183,750, and continue this pattern, creating special celestial moments that punctuate the middle of each seasonal period.
 
-##### Eclipse Types
+### Eclipse Types
 | Type | Moon Phase | Description |
 |------|------------|-------------|
 | Total Eclipse | 🌑 (New Moon) | Complete alignment of Moon and Sun |
