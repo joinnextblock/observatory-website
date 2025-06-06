@@ -83,4 +83,3 @@ In the history of Bitcoin, price trends have often mirrored the virtual seasons 
 - and has tended to drop or consolidate during the "winter" phase (leading up to the next halving)
 
 The mathematical relationships between season starts, eclipse midpoints, and halving events create a rich temporal structure where each type of event has its own significance. Seasonal boundaries mark natural transition points, eclipses represent peak seasonal moments when the Moon crosses the Bitcoin Sun, and halvings coincide with seasonal beginnings to mark new Bitcoin Years. This deterministic system requires no external data sources while providing users with multiple layers of meaningful time markers that transform blockchain progression into an intuitive astronomical narrative.
-
