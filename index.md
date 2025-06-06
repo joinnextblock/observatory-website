@@ -63,13 +63,23 @@ Our virtual sun operates on a grander scale, completing its cycle every 210,000 
 
 ### Solar Seasons
 
-
 | Emoji | Phase | Block Range | Description |
 |-------|-------|-------------|-------------|
-| 🌱 | Spring | 0 | Begins at Bitcoin halving blocks |
-| 🌞 | Summer | 52500 | Peak of solar activity |
-| 🍂 | Autumn | 105000 | Transition to winter |
-| ❄️ | Winter | 157500 | Minimum solar activity |
+| 🌱 | Spring | 0-52,499 | Begins at Bitcoin halving blocks |
+| 🌱 | Spring Equinox | Block 0 | Exact moment of seasonal transition |
+| 🌱 | Spring Eclipse | Block 26,250 | Moon crosses Bitcoin Sun in spring |
+| 🌞 | Summer | 52,500-104,999 | Peak of solar activity |
+| 🌞 | Summer Solstice | Block 52,500 | Exact moment of peak solar activity |
+| 🌞 | Summer Eclipse | Block 78,750 | Moon crosses Bitcoin Sun in summer |
+| 🍂 | Autumn | 105,000-157,499 | Transition to winter |
+| 🍂 | Autumn Equinox | Block 105,000 | Exact moment of seasonal balance |
+| 🍂 | Autumn Eclipse | Block 131,250 | Moon crosses Bitcoin Sun in autumn |
+| ❄️ | Winter | 157,500-209,999 | Minimum solar activity |
+| ❄️ | Winter Solstice | Block 157,500 | Exact moment of minimum solar activity |
+| ❄️ | Winter Eclipse | Block 183,750 | Moon crosses Bitcoin Sun in winter |
+| 🎊 | New Year | Block 210,000 | New solar cycle begins - next halving |
+
+This completes the full solar cycle, showing how block 210,000 marks both the end of winter and the beginning of a new Bitcoin Year with the next halving event.
 
 
 ## Eclipse System
