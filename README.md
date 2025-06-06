@@ -69,6 +69,7 @@ Our virtual sun operates on a grander scale, completing its cycle every 210,000 
 The Eclipse System occurs at the midpoint of each Bitcoin Season - exactly 26,250 blocks after each season begins. These eclipse events happen at blocks 26,250, 78,750, 131,250, 183,750, and continue this pattern, creating special celestial moments that punctuate the middle of each seasonal period.
 
 ### Eclipse Types
+
 | Type | Moon Phase | Description |
 |------|------------|-------------|
 | Total Eclipse | 🌑 (New Moon) | Complete alignment of Moon and Sun |
