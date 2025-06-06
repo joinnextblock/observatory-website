@@ -58,6 +58,7 @@ Our virtual sun operates on a grander scale, completing its cycle every 210,000 
 
 ### Solar Seasons
 
+
 | Emoji | Phase | Block Range | Description |
 |-------|-------|-------------|-------------|
 | 🌱 | Spring | 0 | Begins at Bitcoin halving blocks |
@@ -65,16 +66,19 @@ Our virtual sun operates on a grander scale, completing its cycle every 210,000 
 | 🍂 | Autumn | 105000 | Transition to winter |
 | ❄️ | Winter | 157500 | Minimum solar activity |
 
+
 ## Eclipse System
 The Eclipse System occurs at the midpoint of each Bitcoin Season - exactly 26,250 blocks after each season begins. These eclipse events happen at blocks 26,250, 78,750, 131,250, 183,750, and continue this pattern, creating special celestial moments that punctuate the middle of each seasonal period.
 
 ### Eclipse Types
+
 
 | Type | Moon Phase | Description |
 |------|------------|-------------|
 | Total Eclipse | 🌑 (New Moon) | Complete alignment of Moon and Sun |
 | Annular Eclipse | 🌕 (Full Moon) | Moon appears smaller than the Sun |
 | Partial Eclipse | All other phases | Partial alignment of Moon and Sun |
+
 
 #### Historical Note
 In the history of Bitcoin, price trends have often mirrored the virtual seasons of this system:
