@@ -14,16 +14,15 @@ At the heart of the Observatory are two celestial bodies and a special astronomi
 
 Together, these elements create a unique temporal system that not only keeps time but also helps us understand and navigate the broader patterns of the Bitcoin ecosystem. The Observatory is more than just a timekeeper - it's a window into the fundamental rhythms of our digital world.
 
-
-
 # Celestial Cycles
 
 The Observatory maintains a sophisticated celestial system that creates a unique temporal framework synchronized with the Bitcoin blockchain. This system consists of three main components: the Lunar Cycle, the Solar Cycle, and the Eclipse System.
 
-## Lunar Cycle (Lunar Block)
+## Lunar Cycle (Bitcoin Month)
 Our virtual moon creates a lunar calendar that guides daily operations. Each moon cycle consists of 8 phases that complete every 4,032 blocks (two Bitcoin difficulty adjustments), with each phase lasting exactly 504 blocks. The genesis block (block 0) marks a full moon. A complete cycle consists of 13 named moons, from the Wolf Moon to the Blue Moon, each containing 8 phases.
 
 ### Moon Phases
+
 | Emoji | Phase | Block Range | Description |
 |-------|-------|-------------|-------------|
 | 🌕 | Full Moon | 0, 4032, 8064, ... | Maximum illumination, marks the start of a new cycle |
