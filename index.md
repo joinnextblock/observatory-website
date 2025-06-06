@@ -1,3 +1,8 @@
+---
+layout: default
+title: Observatory
+---
+
 # Overview
 
 The Observatory is NextBlock City's celestial timekeeper, synchronizing our digital metropolis with the Bitcoin blockchain. Like an ancient astronomical observatory that tracked the movements of stars and planets, our Observatory tracks the rhythm of Bitcoin blocks, creating a unique temporal system that guides the city's operations.
