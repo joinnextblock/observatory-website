@@ -25,10 +25,10 @@ Our virtual moon creates a lunar calendar that guides daily operations. Each moo
 
 | Emoji | Phase | Block Range | Description |
 |-------|-------|-------------|-------------|
-| 🌕 | Full Moon | 0, 4032, 8064, ... | Maximum illumination, marks the start of a new cycle |
+| 🌕 | Full Moon | 0, 4032 | Maximum illumination, marks the start of a new cycle |
 | 🌖 | Waning Gibbous | 1-504 | Moon gradually decreases in illumination |
 | 🌗 | Last Quarter | 505-1008 | Half of the moon is illuminated |
-| 🌘 | Waning Crescent | 1009-1512 | Moon continues to decrease in illumination |
+| 🌘 | Waning Crescent | 1009-1512 | Moon continues to decrease in illumination | 
 | 🌑 | New Moon | 1513-2016 | Minimum illumination, marks the midpoint of the cycle |
 | 🌒 | Waxing Crescent | 2017-2520 | Moon begins to increase in illumination |
 | 🌓 | First Quarter | 2521-3024 | Half of the moon is illuminated |
@@ -59,10 +59,10 @@ Our virtual sun operates on a grander scale, completing its cycle every 210,000 
 ### Solar Seasons
 | Emoji | Phase | Block Range | Description |
 |-------|-------|-------------|-------------|
-| 🌱 | Spring | 0, 210000, 420000, ... | Begins at Bitcoin halving blocks |
-| 🌞 | Summer | 52500, 262500, ... | Peak of solar activity |
-| 🍂 | Autumn | 105000, 315000, ... | Transition to winter |
-| ❄️ | Winter | 157500, 367500, ... | Minimum solar activity |
+| 🌱 | Spring | 0 | Begins at Bitcoin halving blocks |
+| 🌞 | Summer | 52500 | Peak of solar activity |
+| 🍂 | Autumn | 105000 | Transition to winter |
+| ❄️ | Winter | 157500 | Minimum solar activity |
 
 ## Eclipse System
 The Eclipse System occurs at the midpoint of each Bitcoin Season - exactly 26,250 blocks after each season begins. These eclipse events happen at blocks 26,250, 78,750, 131,250, 183,750, and continue this pattern, creating special celestial moments that punctuate the middle of each seasonal period.
