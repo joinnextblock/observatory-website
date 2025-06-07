@@ -51,7 +51,7 @@ Each moon cycle (4,032 blocks) is given a traditional name, creating a sequence 
 | 🦌 | Buck Moon | July's full moon, named for buck antlers growing |
 | 🐟 | Sturgeon Moon | August's full moon, named for sturgeon fish |
 | 🌾 | Harvest Moon | September's full moon, closest to autumn equinox |
-| 🏹 | Hunter's Moon | October's full moon, named for hunting season |
+| 🏹 | Satoshi's Moon | October's full moon, named for the creator of Bitcoin who released the whitepaper on October 31, 2008 |
 | 🦫 | Beaver Moon | November's full moon, named for beaver trapping |
 | 🧊 | Cold Moon | December's full moon, named for winter's arrival |
 | 🌕 | Blue Moon | The 13th moon in our cycle, completing the lunar year |
