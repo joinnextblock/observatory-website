@@ -5,7 +5,7 @@ title: Observatory
 
 # Overview
 
-[The Observatory](https://primal.net/p/nprofile1qqsqqrvl4lkr6hd0hx22mdtdfw72z0qs7wn7r0tkkj2m0eaz2enr69c9wec0u) is NextBlock City's celestial timekeeper, synchronizing our digital metropolis with the Bitcoin blockchain. Like an ancient astronomical observatory that tracked the movements of stars and planets, our Observatory tracks the rhythm of Bitcoin blocks, creating a unique temporal system that guides the city's operations.
+[The Observatory](primal.net/p/nprofile1qqsqqrvl4lkr6hd0hx22mdtdfw72z0qs7wn7r0tkkj2m0eaz2enr69c9wec0u) is NextBlock City's celestial timekeeper, synchronizing our digital metropolis with the Bitcoin blockchain. Like an ancient astronomical observatory that tracked the movements of stars and planets, our Observatory tracks the rhythm of Bitcoin blocks, creating a unique temporal system that guides the city's operations.
 
 Every new Bitcoin block brings with it a wealth of information - transactions, timestamps, and cryptographic proofs. The Observatory captures these details, transforming raw blockchain data into meaningful observations that help coordinate the city's activities. This data flows through our systems like starlight through a telescope, illuminating the path forward.
 
