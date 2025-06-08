@@ -26,16 +26,16 @@ The Observatory's virtual moon creates a lunar calendar that guides our daily op
 
 ### Moon Phases
 
-| Emoji | Phase | Block Range | Description |
-|-------|-------|-------------|-------------|
-| 🌕 | Full Moon | 0, 4032 | Maximum illumination, marks the start of a new cycle |
-| 🌖 | Waning Gibbous | 1-504 | Moon gradually decreases in illumination |
-| 🌗 | Last Quarter | 505-1008 | Half of the moon is illuminated |
-| 🌘 | Waning Crescent | 1009-1512 | Moon continues to decrease in illumination | 
-| 🌑 | New Moon | 1513-2016 | Minimum illumination, marks the midpoint of the cycle |
-| 🌒 | Waxing Crescent | 2017-2520 | Moon begins to increase in illumination |
-| 🌓 | First Quarter | 2521-3024 | Half of the moon is illuminated |
-| 🌔 | Waxing Gibbous | 3025-4031 | Moon continues to increase in illumination |
+| Emoji | Phase | Block Range |
+|-------|-------|-------------|
+| 🌕 | Full Moon | 0-503 |
+| 🌖 | Waning Gibbous | 504-1007 |
+| 🌗 | Last Quarter | 1008-1511 |
+| 🌘 | Waning Crescent | 1512-2015 |
+| 🌑 | New Moon | 2016-2519 |
+| 🌒 | Waxing Crescent | 2520-3023 |
+| 🌓 | First Quarter | 3024-3527 |
+| 🌔 | Waxing Gibbous | 3528-4031 |
 
 ### Named Moons
 Each moon cycle (4,032 blocks) is given a traditional name, creating a sequence of 13 moons that repeats throughout the Bitcoin blockchain. Remarkably, this sequence aligns perfectly with our seasons - each season contains approximately 13 moons (52,500 blocks ÷ 4,032 blocks ≈ 13.02 moons per season).
