@@ -190,14 +190,15 @@ This creates a living, breathing atmospheric system where:
 - **Each block** brings new **observational conditions**
 - **The Observatory's view** of celestial events changes based on **real Bitcoin network performance**
 
-| Condition | Range |
-|-----------|-------|
-| 🌟 Perfect Celestial Clarity | 10,000+ tx per full block equivalent |
-| ☀️ Excellent Observational Conditions | 8,000-10,000 tx per full block equivalent |
-| 🌤️ Good Atmospheric Conditions | 6,000-8,000 tx per full block equivalent |
-| ⛅ Mixed Atmospheric Interference | 3,000-6,000 tx per full block equivalent |
-| ☁️ Heavy Atmospheric Disturbance | 1,000-3,000 tx per full block equivalent |
-| 🌫️ Severe Atmospheric Interference | <1,000 tx per full block equivalent |
+| Condition | Emoji | Range |
+|-----------|-------|-------|
+| Clear Skies | ☀️ | 8,000+ tx per full block equivalent |
+| Few Clouds | 🌤️ | 6,000-8,000 tx per full block equivalent |
+| Partly Cloudy | ⛅ | 3,000-6,000 tx per full block equivalent |
+| Overcast | ☁️ | 2,000-3,000 tx per full block equivalent |
+| Heavy Clouds | 🌦️ | 1,000-2,000 tx per full block equivalent |
+| Rain | 🌧️ | 500-1,000 tx per full block equivalent |
+| Thunderstorms | ⛈️ | <500 tx per full block equivalent |
 
 The atmospheric scale helps us understand the efficiency of Bitcoin's network operations. When the ratio is consistently high (clear skies), it indicates optimal network utilization with many transactions efficiently packed into blocks. When the ratio is low (heavy atmospheric interference), it suggests network inefficiency where block space isn't being fully utilized, creating conditions that may obscure our astronomical observations.
 
