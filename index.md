@@ -156,34 +156,68 @@ The mathematical relationships between season starts, eclipse midpoints, and hal
 
 The Observatory uses the ratio of transactions to block size to determine observational conditions during our celestial observations. Just as atmospheric conditions affect how clearly we can see celestial bodies in the night sky, the efficiency of Bitcoin's network influences our observational clarity.
 
+To calculate atmospheric conditions:
+
+1. **Calculate block weight utilization**: `block_weight ÷ 4,000,000` (MAX_BLOCK_WEIGHT)
+2. **Calculate efficiency ratio**: `transaction_count ÷ utilization_percentage`  
+3. **Determine atmospheric condition**: Compare ratio to scale below
+
+**Example**: Block with 2,400 transactions and 1,200,000 weight units
+```
+Utilization: 1,200,000 ÷ 4,000,000 = 0.30 (30% of max block weight)
+Efficiency ratio: 2,400 ÷ 0.30 = 8,000 tx per full block equivalent
+Condition: 8,000 → ☀️ Excellent Observational Conditions (clear skies with exceptional visibility)
+```
+
+## Dynamic Sky Rendering
+
+For any block height > 0, the Observatory:
+
+1. **Reads block data**: Gets transaction count and block weight
+2. **Calculates efficiency**: `transaction_count ÷ (block_weight ÷ 4,000,000)`
+3. **Renders sky condition**: Maps the ratio to atmospheric conditions
+
+## Real-Time Sky Changes
+
+Every ~10 minutes when a new block is mined, the Observatory's sky updates:
+
+- **Block 850,123** with 2,800 txs and 2,800,000 weight units → `2,800 ÷ 0.70 = 4,000` → ⛅ **Scattered clouds affecting observations**
+- **Block 850,124** with 1,200 txs and 1,600,000 weight units → `1,200 ÷ 0.40 = 3,000` → ⛅ **Scattered clouds affecting observations**  
+- **Block 850,125** with 800 txs and 3,200,000 weight units → `800 ÷ 0.80 = 1,000` → ☁️ **Dense overcast limiting visibility**
+
+This creates a living, breathing atmospheric system where:
+- **Network efficiency** directly affects **sky clarity**
+- **Each block** brings new **observational conditions**
+- **The Observatory's view** of celestial events changes based on **real Bitcoin network performance**
+
 **🌟 Perfect Celestial Clarity (Theoretical Maximum)**
-- **~4,000+ tx/MB** - The theoretical limit where every photon of light passes unobstructed
+- **10,000+ tx per full block equivalent** - The theoretical limit where every photon of light passes unobstructed
 - Achieved when blocks contain only the most efficient transaction types (P2TR)
 - Minimal witness data, maximum transaction density
 - *"Crystal-perfect atmospheric conditions with zero interference"*
 
 **☀️ Excellent Observational Conditions**  
-- **3,000-4,000 tx/MB** - Pristine skies, remarkable clarity
+- **8,000-10,000 tx per full block equivalent** - Pristine skies, remarkable clarity
 - High-efficiency blocks during optimal network usage
 - *"Clear skies with exceptional visibility"*
 
 **🌤️ Good Atmospheric Conditions**
-- **2,000-3,000 tx/MB** - Generally clear with minor atmospheric disturbance
+- **6,000-8,000 tx per full block equivalent** - Generally clear with minor atmospheric disturbance
 - Typical efficient usage patterns
 - *"Light clouds, good observational quality"*
 
 **⛅ Mixed Atmospheric Interference**
-- **1,000-2,000 tx/MB** - Partially cloudy, some obstruction
-- Average network efficiency
+- **3,000-6,000 tx per full block equivalent** - Partially cloudy, some obstruction
+- Average network efficiency (most common range)
 - *"Scattered clouds affecting observations"*
 
 **☁️ Heavy Atmospheric Disturbance**
-- **500-1,000 tx/MB** - Significant cloud cover, poor visibility
+- **1,000-3,000 tx per full block equivalent** - Significant cloud cover, poor visibility
 - Inefficient block usage (large transactions, low density)
 - *"Dense overcast limiting visibility"*
 
 **🌫️ Severe Atmospheric Interference**
-- **<500 tx/MB** - Nearly impossible observational conditions  
+- **<1,000 tx per full block equivalent** - Nearly impossible observational conditions  
 - Extremely inefficient blocks
 - *"Thick fog obscuring all celestial observations"*
 
