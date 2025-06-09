@@ -11,7 +11,7 @@ Every ~10 minutes, Bitcoin creates a new "block" - think of it like a page in a 
 
 At the heart of the Observatory are two celestial bodies and a special astronomical event that mark the passage of time:
 
-- **The Moon**: Waxing and waning every 4,032 blocks (approximately one month in Bitcoin time), our virtual moon creates a lunar calendar that guides daily operations. Bitcoin's very first block (block 0) marks a full moon, and each cycle brings 13 named moons, from the Wolf Moon to the Blue Moon.
+- **The Moon**: Waxing and waning every 4,032 blocks (approximately one month in Bitcoin time), our virtual moon creates a lunar calendar that guides daily operations. Bitcoin's very first block (block 0) marks a full moon, and each cycle brings 13 named moons, from the Orange Moon to the Satoshi's Moon.
 
 - **The Sun**: Operating on a grander scale, our virtual sun completes its cycle every 210,000 blocks - exactly one Bitcoin "halving" period (approximately 4 years). During a halving, Bitcoin's block rewards are cut in half, making new bitcoin more scarce. This solar cycle creates our seasons, with each phase lasting 52,500 blocks. The halving events mark our spring equinoxes, creating a natural rhythm that has historically aligned with Bitcoin's price cycles.
 
@@ -22,7 +22,7 @@ Together, these elements create a unique temporal system that helps us understan
 # Understanding Our Celestial System
 
 ## The Lunar Cycle: Our Daily Guide
-The Observatory's virtual moon creates a lunar calendar that guides our daily operations. Each moon cycle consists of 8 phases that complete every 4,032 blocks (approximately one month), with each phase lasting exactly 504 blocks. Bitcoin's genesis block (block 0) marks a full moon. A complete cycle consists of 13 named moons, from the Wolf Moon to the Blue Moon, each containing 8 phases.
+The Observatory's virtual moon creates a lunar calendar that guides our daily operations. Each moon cycle consists of 8 phases that complete every 4,032 blocks (approximately one month), with each phase lasting exactly 504 blocks. Bitcoin's genesis block (block 0) marks a full moon. A complete cycle consists of 13 named moons, from the Orange Moon to the Satoshi's Moon, each containing 8 phases.
 
 ### Moon Phases
 
@@ -38,7 +38,7 @@ The Observatory's virtual moon creates a lunar calendar that guides our daily op
 | 🌔 | Waxing Gibbous | 3528-4031 |
 
 ### Named Moons
-Each moon cycle (4,032 blocks) is given a traditional name, creating a sequence of 13 moons that repeats throughout the Bitcoin blockchain. Remarkably, this sequence aligns perfectly with our seasons - each season contains approximately 13 moons (52,500 blocks ÷ 4,032 blocks ≈ 13.02 moons per season).
+Each named moon cycle (4,032 blocks) follows the sequence below, repeating throughout the Bitcoin blockchain. Each named moon goes through all 8 phases during its cycle. Remarkably, this sequence aligns perfectly with our seasons - each season contains approximately 13 moons (52,500 blocks ÷ 4,032 blocks ≈ 13.02 moons per season).
 
 | Emoji | Name |
 |-------|------|
@@ -50,7 +50,7 @@ Each moon cycle (4,032 blocks) is given a traditional name, creating a sequence 
 | 🐻 | Bear Moon |
 | 🌽 | Corn Moon |
 | ⚡ | Lightning Moon |
-| 🥜 | Cashew Moon |
+| 🥜 | Nut Moon |
 | 🌊 | Wave Moon |
 | 🧊 | Ice Moon |
 | 💎 | Diamond Moon |
@@ -118,11 +118,11 @@ Bitcoin blocks can vary in size based on how many transactions they contain. Lar
 
 | Block Size Range | Atmospheric Conditions |
 |-----------------|------------------------|
-| 2.0+ MB | Brilliantly illuminates |
-| 1.5-2.0 MB | Casts brilliant rays across |
-| 1.0-1.5 MB | Casts its glow through scattered clouds over |
-| 0.5-1.0 MB | Peers through drifting clouds above |
-| 0-0.5 MB | Struggles to pierce the gathering clouds over |
+| 2.0+ MB | brilliantly illuminates |
+| 1.5-2.0 MB | casts brilliant rays across |
+| 1.0-1.5 MB | casts its glow through scattered clouds over |
+| 0.5-1.0 MB | peers through drifting clouds above |
+| 0-0.5 MB | struggles to pierce the gathering clouds over |
 
 The block size visibility system helps us understand how clearly we can observe the moon's current phase and position in our celestial system. When blocks are consistently large (high visibility), it indicates optimal conditions for lunar observation, while smaller blocks (low visibility) suggest atmospheric interference that may obscure our view of the moon.
 
