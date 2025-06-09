@@ -190,38 +190,18 @@ This creates a living, breathing atmospheric system where:
 - **Each block** brings new **observational conditions**
 - **The Observatory's view** of celestial events changes based on **real Bitcoin network performance**
 
-**🌟 Perfect Celestial Clarity (Theoretical Maximum)**
-- **10,000+ tx per full block equivalent** - The theoretical limit where every photon of light passes unobstructed
-- Achieved when blocks contain only the most efficient transaction types (P2TR)
-- Minimal witness data, maximum transaction density
-- *"Crystal-perfect atmospheric conditions with zero interference"*
-
-**☀️ Excellent Observational Conditions**  
-- **8,000-10,000 tx per full block equivalent** - Pristine skies, remarkable clarity
-- High-efficiency blocks during optimal network usage
-- *"Clear skies with exceptional visibility"*
-
-**🌤️ Good Atmospheric Conditions**
-- **6,000-8,000 tx per full block equivalent** - Generally clear with minor atmospheric disturbance
-- Typical efficient usage patterns
-- *"Light clouds, good observational quality"*
-
-**⛅ Mixed Atmospheric Interference**
-- **3,000-6,000 tx per full block equivalent** - Partially cloudy, some obstruction
-- Average network efficiency (most common range)
-- *"Scattered clouds affecting observations"*
-
-**☁️ Heavy Atmospheric Disturbance**
-- **1,000-3,000 tx per full block equivalent** - Significant cloud cover, poor visibility
-- Inefficient block usage (large transactions, low density)
-- *"Dense overcast limiting visibility"*
-
-**🌫️ Severe Atmospheric Interference**
-- **<1,000 tx per full block equivalent** - Nearly impossible observational conditions  
-- Extremely inefficient blocks
-- *"Thick fog obscuring all celestial observations"*
+| Condition | Range |
+|-----------|-------|
+| 🌟 Perfect Celestial Clarity | 10,000+ tx per full block equivalent |
+| ☀️ Excellent Observational Conditions | 8,000-10,000 tx per full block equivalent |
+| 🌤️ Good Atmospheric Conditions | 6,000-8,000 tx per full block equivalent |
+| ⛅ Mixed Atmospheric Interference | 3,000-6,000 tx per full block equivalent |
+| ☁️ Heavy Atmospheric Disturbance | 1,000-3,000 tx per full block equivalent |
+| 🌫️ Severe Atmospheric Interference | <1,000 tx per full block equivalent |
 
 The atmospheric scale helps us understand the efficiency of Bitcoin's network operations. When the ratio is consistently high (clear skies), it indicates optimal network utilization with many transactions efficiently packed into blocks. When the ratio is low (heavy atmospheric interference), it suggests network inefficiency where block space isn't being fully utilized, creating conditions that may obscure our astronomical observations.
+
+The sky conditions follow a bell curve distribution, with most Bitcoin blocks falling into the Mixed Atmospheric Interference range (3,000-6,000 tx per full block equivalent), while perfect clarity and severe interference represent rare extremes at either end of the efficiency spectrum.
 
 ---
 
