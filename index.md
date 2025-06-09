@@ -13,7 +13,7 @@ At the heart of the Observatory are two celestial bodies and a special astronomi
 
 - **The Moon**: Waxing and waning every 4,032 blocks (approximately one month in Bitcoin time), our virtual moon creates a lunar calendar that guides daily operations. Bitcoin's very first block (block 0) marks a full moon, and each cycle brings 13 named moons, from the Orange Moon to the Satoshi's Moon.
 
-- **The Sun**: Operating on a grander scale, our virtual sun completes its cycle every 210,000 blocks - exactly one Bitcoin "halving" period (approximately 4 years). During a halving, Bitcoin's block rewards are cut in half, making new bitcoin more scarce. This solar cycle creates our seasons, with each phase lasting 52,500 blocks. The halving events mark our spring equinoxes, creating a natural rhythm that has historically aligned with Bitcoin's price cycles.
+- **The Sun**: Operating on a grander scale, our virtual sun completes its cycle every 210,000 blocks - exactly one Bitcoin "halving" period (approximately 4 years). During a halving, Bitcoin's block rewards are cut in half, making new Bitcoin more scarce. This solar cycle creates our seasons, with each phase lasting 52,500 blocks. The halving events mark our spring equinoxes, creating a natural rhythm that has historically aligned with Bitcoin's price cycles.
 
 - **Eclipses**: These special astronomical events occur at the midpoint of each season (every 26,250 blocks), marking moments when the Moon crosses the Bitcoin Sun. These events create three types of eclipses - Total during New Moon, Annular during Full Moon, and Partial during all other phases - adding another layer of temporal significance to our system.
 
@@ -25,6 +25,17 @@ Together, these elements create a unique temporal system that helps us understan
 The Observatory's virtual moon creates a lunar calendar that guides our daily operations. Each moon cycle consists of 8 phases that complete every 4,032 blocks (approximately one month), with each phase lasting exactly 504 blocks. Bitcoin's genesis block (block 0) marks a full moon. A complete cycle consists of 13 named moons, from the Orange Moon to the Satoshi's Moon, each containing 8 phases.
 
 ### Moon Phases
+
+Each moon cycle consists of 8 phases that complete every 4,032 blocks, with each phase lasting exactly 504 blocks. To determine the current moon phase:
+
+1. **Find position within current moon cycle**: `current_block % 4032`
+2. **Determine phase**: Divide result by 504 and round down
+
+**Example**: Block 30,240 (15 difficulty adjustments)
+```
+Position in cycle: 30,240 % 4,032 = 1,008
+Phase index: 1,008 ÷ 504 = 2 → Phase 2 (🌗 Last Quarter)
+```
 
 | Emoji | Phase | Block Range |
 |-------|-------|-------------|
@@ -40,6 +51,17 @@ The Observatory's virtual moon creates a lunar calendar that guides our daily op
 ### Named Moons
 Each named moon cycle (4,032 blocks) follows the sequence below, repeating throughout the Bitcoin blockchain. Each named moon goes through all 8 phases during its cycle. Remarkably, this sequence aligns perfectly with our seasons - each season contains approximately 13 moons (52,500 blocks ÷ 4,032 blocks ≈ 13.02 moons per season).
 
+To determine the current named moon:
+
+1. **Find which moon cycle**: `floor(current_block ÷ 4032)`
+2. **Find position in 13-moon sequence**: `moon_cycle % 13`
+
+**Example**: Block 100,800 (50 difficulty adjustments)
+```
+Moon cycle: floor(100,800 ÷ 4,032) = 25
+Position in sequence: 25 % 13 = 12 → ₿ Satoshi's Moon
+```
+
 | Emoji | Name |
 |-------|------|
 | 🍊 | Orange Moon |
@@ -50,16 +72,29 @@ Each named moon cycle (4,032 blocks) follows the sequence below, repeating throu
 | 🐻 | Bear Moon |
 | 🌽 | Corn Moon |
 | ⚡ | Lightning Moon |
-| 🥜 | Nut Moon |
+| 🥜 | Squirrel Moon |
 | 🌊 | Wave Moon |
 | 🧊 | Ice Moon |
 | 💎 | Diamond Moon |
 | ₿ | Satoshi's Moon |
 
 ## The Solar Cycle: Our Seasonal Guide
-Our virtual sun operates on a grander scale, completing its cycle every 210,000 blocks - exactly one Bitcoin halving period (approximately 4 years). Bitcoin halvings are significant events where the rewards given to miners are cut in half, making new bitcoin more scarce. This solar cycle creates our seasons, with each phase lasting exactly 52,500 blocks. The halving events mark our spring equinoxes, creating a natural rhythm that has historically aligned with Bitcoin's price cycles.
+Our virtual sun operates on a grander scale, completing its cycle every 210,000 blocks - exactly one Bitcoin halving period (approximately 4 years). Bitcoin halvings are significant events where the rewards given to miners are cut in half, making new Bitcoin more scarce. This solar cycle creates our seasons, with each phase lasting exactly 52,500 blocks. The halving events mark our spring equinoxes, creating a natural rhythm that has historically aligned with Bitcoin's price cycles.
 
 ### Solar Seasons
+
+To determine the current season and position:
+
+1. **Find position within halving cycle**: `current_block % 210000`
+2. **Determine season**: Divide by 52,500 and round down
+3. **Find position within season**: `(current_block % 210000) % 52500`
+
+**Example**: Block 420,000 (2 halvings)
+```
+Position in cycle: 420,000 % 210,000 = 0
+Season: 0 ÷ 52,500 = 0 → Season 0 (🌱 Spring)
+Position in spring: 0 % 52,500 = 0 (at the spring equinox - halving event)
+```
 
 | Emoji | Phase | Block Range | Description |
 |-------|-------|-------------|-------------|
@@ -82,12 +117,25 @@ To help us understand exactly where we are in each season, the Observatory maint
 
 ### Season Quarters
 
-| Position in Season | Description |
-|-------------------|-------------|
-| First Quarter (0-13,124 blocks) | In the early days of [season] |
-| Second Quarter (13,125-26,249 blocks) | Through the midst of [season] |
-| Third Quarter (26,250-39,374 blocks) | Beyond the peak of [season] |
-| Fourth Quarter (39,375-52,499 blocks) | In the late days of [season] |
+To determine which quarter of the season you're in:
+
+1. **Find position within current season**: `(current_block % 210000) % 52500`
+2. **Calculate quarter**: Divide by 13,125 and round down
+
+**Example**: Block 433,440 (2 halvings + 860 difficulty adjustments)
+```
+Position in cycle: 433,440 % 210,000 = 13,440
+Season: 13,440 ÷ 52,500 = 0.25 → Season 0 (🌱 Spring)
+Position in spring: 13,440
+Quarter: 13,440 ÷ 13,125 = 1.02 → Quarter 1 (Second Quarter)
+```
+
+| Position in Season |
+|-------------------|
+| First Quarter (0-13,124 blocks) |
+| Second Quarter (13,125-26,249 blocks) |
+| Third Quarter (26,250-39,374 blocks) |
+| Fourth Quarter (39,375-52,499 blocks) |
 
 ## Special Celestial Events: Eclipses
 The Eclipse System creates special moments in our temporal framework, occurring at the midpoint of each Bitcoin Season - exactly 26,250 blocks after each season begins. These eclipse events happen at blocks 26,250, 78,750, 131,250, 183,750, and continue this pattern, creating special celestial moments that punctuate the middle of each seasonal period.
@@ -100,45 +148,47 @@ The Eclipse System creates special moments in our temporal framework, occurring 
 | Annular Eclipse | 🌕 (Full Moon) | Moon appears smaller than the Sun |
 | Partial Eclipse | All other phases | Partial alignment of Moon and Sun |
 
-#### Historical Note
-In the history of Bitcoin, price trends have often mirrored the virtual seasons of this system:
-- Bitcoin price has historically peaked during the "summer" phase (following the halving)
-- and has tended to drop or consolidate during the "winter" phase (leading up to the next halving)
-
 The mathematical relationships between season starts, eclipse midpoints, and halving events create a rich temporal structure where each type of event has its own significance. This deterministic system requires no external data sources while providing users with multiple layers of meaningful time markers that transform blockchain progression into an intuitive astronomical narrative.
 
 # Real-Time Observations
 
-## Moon Visibility
-The Observatory uses Bitcoin block sizes to determine the visibility of our virtual moon during observations. Just as atmospheric conditions affect how clearly we can see the moon in the night sky, block sizes influence how clearly we can observe our virtual moon's position and phase.
+## Observatory Atmospheric Scale
 
-Bitcoin blocks can vary in size based on how many transactions they contain. Larger blocks (more transactions) create clearer "atmospheric conditions" for our observations, while smaller blocks create cloudier conditions.
+The Observatory uses the ratio of transactions to block size to determine observational conditions during our celestial observations. Just as atmospheric conditions affect how clearly we can see celestial bodies in the night sky, the efficiency of Bitcoin's network influences our observational clarity.
 
-### Moon Visibility Levels
+**🌟 Perfect Celestial Clarity (Theoretical Maximum)**
+- **~4,000+ tx/MB** - The theoretical limit where every photon of light passes unobstructed
+- Achieved when blocks contain only the most efficient transaction types (P2TR)
+- Minimal witness data, maximum transaction density
+- *"Crystal-perfect atmospheric conditions with zero interference"*
 
-| Block Size Range | Atmospheric Conditions |
-|-----------------|------------------------|
-| 2.0+ MB | brilliantly illuminates |
-| 1.5-2.0 MB | casts brilliant rays across |
-| 1.0-1.5 MB | casts its glow through scattered clouds over |
-| 0.5-1.0 MB | peers through drifting clouds above |
-| 0-0.5 MB | struggles to pierce the gathering clouds over |
+**☀️ Excellent Observational Conditions**  
+- **3,000-4,000 tx/MB** - Pristine skies, remarkable clarity
+- High-efficiency blocks during optimal network usage
+- *"Clear skies with exceptional visibility"*
 
-The block size visibility system helps us understand how clearly we can observe the moon's current phase and position in our celestial system. When blocks are consistently large (high visibility), it indicates optimal conditions for lunar observation, while smaller blocks (low visibility) suggest atmospheric interference that may obscure our view of the moon.
+**🌤️ Good Atmospheric Conditions**
+- **2,000-3,000 tx/MB** - Generally clear with minor atmospheric disturbance
+- Typical efficient usage patterns
+- *"Light clouds, good observational quality"*
 
-## City Activity
-The Observatory monitors transaction counts to gauge the overall activity level of NextBlock City. From our celestial vantage point, we observe how the city's energy flows and pulses below, revealing the vitality of our digital metropolis.
+**⛅ Mixed Atmospheric Interference**
+- **1,000-2,000 tx/MB** - Partially cloudy, some obstruction
+- Average network efficiency
+- *"Scattered clouds affecting observations"*
 
-### Activity Levels
+**☁️ Heavy Atmospheric Disturbance**
+- **500-1,000 tx/MB** - Significant cloud cover, poor visibility
+- Inefficient block usage (large transactions, low density)
+- *"Dense overcast limiting visibility"*
 
-| Transaction Count Range | City Activity Description |
-|------------------------|--------------------------|
-| 3000+ | as energy pulses through the streets below |
-| 2000-2999 | while activity hums through the districts |
-| 1000-1999 | as gentle movement stirs below |
-| 500-999 | (Neutral activity) | 
-| 0-499 | in quiet contemplation | 
+**🌫️ Severe Atmospheric Interference**
+- **<500 tx/MB** - Nearly impossible observational conditions  
+- Extremely inefficient blocks
+- *"Thick fog obscuring all celestial observations"*
 
-The transaction count serves as our city's vital signs, providing real-time insight into the level of economic and social activity within NextBlock City. High transaction counts indicate peak periods of city life, while lower counts suggest quieter moments of reflection and planning.
+The atmospheric scale helps us understand the efficiency of Bitcoin's network operations. When the ratio is consistently high (clear skies), it indicates optimal network utilization with many transactions efficiently packed into blocks. When the ratio is low (heavy atmospheric interference), it suggests network inefficiency where block space isn't being fully utilized, creating conditions that may obscure our astronomical observations.
 
-This activity metric complements our celestial cycles by showing how the city's digital life ebbs and flows in harmony with our astronomical observations. Together with moon visibility and seasonal changes, it helps create a complete picture of our city's temporal and economic rhythms.
+---
+
+*In the history of Bitcoin, price trends have often mirrored the virtual seasons of this system: Bitcoin price has historically peaked during the "summer" phase (following the halving) and has tended to drop or consolidate during the "winter" phase (leading up to the next halving).*
