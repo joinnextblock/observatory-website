@@ -13,7 +13,7 @@ title: Observatory
 
 ## How does it work?
 
-Every ~10 minutes, Bitcoin creates a new "block" - think of it like a page in a digital ledger that records transactions from around the world. Each block brings with it a wealth of information - transaction records, timestamps, and cryptographic security proofs. The Observatory captures these details, transforming raw blockchain data into meaningful observations that help coordinate the city's activities.
+Every ~10 minutes, Bitcoin creates a new "block" - think of it like a page in a digital ledger that records transactions from around the world. Each block brings with it a wealth of information - transaction records, timestamps, and cryptographic security proofs. The Observatory captures these details, transforming raw blockchain data into meaningful observations that update the skies over NextBlock City. As each new block arrives, the virtual celestial bodies shift position, atmospheric conditions change, and the city below experiences a new astronomical state that reflects the current blockchain activity.
 
 **This transformation is powered by [Telescope](https://github.com/joinnextblock/telescope)**, a TypeScript library that provides the mathematical foundation for all our astronomical calculations. Telescope maps Bitcoin's blockchain to astronomical cycles, creating a deterministic calendar synchronized with Bitcoin's block production.
 
