@@ -19,6 +19,32 @@ At the heart of the Observatory are two celestial bodies and a special astronomi
 
 Together, these elements create a unique temporal system that helps us understand and navigate the broader patterns of the Bitcoin ecosystem. By translating Bitcoin's technical cycles into familiar astronomical metaphors, the Observatory makes it easier to grasp Bitcoin's natural rhythms and cycles. The Observatory is more than just a timekeeper - it's a window into the fundamental rhythms of our digital world.
 
+# Powered by Telescope
+
+The Observatory is built on [Telescope](https://github.com/joinnextblock/telescope), a TypeScript library that provides the mathematical foundation for all our astronomical calculations. Telescope maps Bitcoin's blockchain to astronomical cycles, creating a deterministic calendar synchronized with Bitcoin's block production.
+
+## How Telescope Works
+
+Telescope provides the Observatory with:
+
+- **Blockheight Calculations**: Precise mathematical functions for working with Bitcoin blockheights and time
+- **Lunar Phase Tracking**: Automatic calculation of moon phases and cycles for every block
+- **Solar Season Monitoring**: Determination of current solar seasons and their transitions
+- **Eclipse Predictions**: Calculation of eclipse events and their types based on moon phases
+- **Temporal Positioning**: Real-time tracking of our position within each seasonal cycle
+
+## Real-Time Block Processing
+
+For every new Bitcoin block, Telescope enables the Observatory to:
+
+1. Calculate the exact lunar phase and determine which named moon we're in
+2. Identify the current solar season and our position within it
+3. Check if the block coincides with an eclipse event
+4. Process block weight and transaction data to determine atmospheric conditions
+5. Analyze network efficiency to gauge observational clarity
+
+This deterministic system requires no external data sources while providing multiple layers of meaningful time markers that transform blockchain progression into an intuitive astronomical narrative. Telescope's type-safe API ensures that all calculations are accurate and reliable, making the Observatory a trustworthy celestial timekeeper for NextBlock City.
+
 # Understanding Our Celestial System
 
 ## The Lunar Cycle: Our Daily Guide
