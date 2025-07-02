@@ -11,7 +11,7 @@ title: Observatory
 
 The Bitcoin protocol creates a new "block" roughly every 10 minutes - like pages in a digital ledger recording transactions worldwide. The Observatory takes this steady rhythm and transforms it into virtual celestial bodies: a Bitcoin Moon that cycles every 4,032 blocks and a Bitcoin Sun that completes seasons every 210,000 blocks.
 
-This creates a unique time system that produces timestamps like `4|2|4|1|430` - capturing everything from major Bitcoin cycles down to the exact block within a moon phase. Instead of arbitrary calendar dates, time flows with Bitcoin's natural rhythms.
+This creates a unique time system that produces timestamps like `4|2|4|1|430 AG` - capturing everything from major Bitcoin cycles down to the exact block within a moon phase. Instead of arbitrary calendar dates, time flows with Bitcoin's natural rhythms.
 
 ## How does it work?
 
