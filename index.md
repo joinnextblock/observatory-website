@@ -9,32 +9,37 @@ title: Observatory
 
 [The Observatory](https://njump.me/npub1qqpd7c77267rxcxfshczek2da8js40c9srvtaexyfz5hma27r0kq8lduyl) is [NextBlock City's](https://njump.me/npub17vscfmnmshfdw68llhduxtr4h0kkmyhzm4phzs40t3gqsmguz7lsak66ne) timekeeper that turns Bitcoin's blockchain into an astronomical calendar. 
 
-The Bitcoin protocol creates a new "block" roughly every 10 minutes - like pages in a digital ledger recording transactions worldwide. The Observatory takes this steady rhythm and transforms it into virtual celestial bodies: a Bitcoin Moon that cycles every 4,032 blocks and a Bitcoin Sun that completes seasons every 210,000 blocks.
+Bitcoin creates a new "block" roughly every 10 minutes - like pages in a digital ledger recording transactions worldwide. The Observatory takes this steady rhythm and transforms it into virtual celestial bodies: a Bitcoin Moon that cycles every 4,032 blocks and a Bitcoin Sun that completes seasons every 210,000 blocks.
 
 This creates a unique time system that produces timestamps like `4|2|4|1|430 AG` - capturing everything from major Bitcoin cycles down to the exact block within a moon phase. Instead of arbitrary calendar dates, time flows with Bitcoin's natural rhythms.
 
-## How does it work?
+## How do I read Observatory dates?
 
-Every ~10 minutes, Bitcoin creates a new "block" - think of it like a page in a digital ledger that records transactions from around the world. Each block brings with it a wealth of information - transaction records, timestamps, and cryptographic security proofs. The Observatory captures these details, transforming raw blockchain data into meaningful observations that update the skies over NextBlock City. As each new block arrives, the virtual celestial bodies shift position, atmospheric conditions change, and the city below experiences a new astronomical state that reflects the current blockchain activity.
+The Observatory uses a 5-part date format: `Solar Cycle | Season | Moon Number | Moon Phase | Blocks Into Phase` followed by AG (After Genesis) or BG (Before Genesis)
 
-**This transformation is powered by [Telescope](https://github.com/joinnextblock/telescope)**, a TypeScript library that provides the mathematical foundation for all our astronomical calculations. Telescope maps Bitcoin's blockchain to astronomical cycles, creating a deterministic calendar synchronized with Bitcoin's block production.
+**Example**: `4|2|4|1|430 AG` means:
+- **4** = 4th Solar Cycle 
+- **2** = 2nd Season (Summer 🌞)
+- **4** = 4th Moon (Whale Moon 🐳)
+- **1** = 1st Phase (Full Moon 🌕)
+- **430** = 430 blocks into current phase
+- **AG** = After Genesis (block 0)
 
-**Telescope transforms raw blockchain data into virtual astronomical events, creating virtual celestial bodies that orbit over NextBlock City. Every Bitcoin block updates our virtual sky, with the Bitcoin Moon and Bitcoin Sun responding to real blockchain activity.**
+### What's the emoji format?
 
-For every new Bitcoin block, Telescope enables the Observatory to monitor only three things:
+Passionate users can replace the middle three numbers with emojis:
+- `4|2|4|1|430 AG` becomes `4🌞🐳🌕430 AG`
 
-1. **Bitcoin Moon Phase**: Calculate the exact lunar phase and determine which named moon we're in
-2. **Bitcoin Sun Season**: Identify the current solar season and our position within it  
-3. **Atmospheric Conditions**: Process block weight and transaction data to determine observational clarity
+### What about shorthand formats?
 
-**What Telescope provides:**
-- **Blockheight Calculations**: Precise mathematical functions for working with Bitcoin blockheights and time
-- **Lunar Phase Tracking**: Automatic calculation of moon phases and cycles for every block
-- **Solar Season Monitoring**: Determination of current solar seasons and their transitions
-- **Eclipse Predictions**: Calculation of eclipse events and their types based on moon phases
-- **Temporal Positioning**: Real-time tracking of our position within each seasonal cycle
+The Observatory supports cron-like shorthand syntax using `-` as a wildcard for referencing the start of specific celestial periods:
 
-This deterministic system requires no external data sources while providing multiple layers of meaningful time markers that transform blockchain progression into an intuitive astronomical narrative.
+- `3|-` = Start of 3rd solar cycle (halving moment)
+- `4|2|-AG` = Start of Autumn (Autumn Equinox of 4th cycle)  
+- `4|2|7|-AG` = Start of 7th moon of autumn in 4th cycle
+- `4|2|7|3|-AG` = Start of 3rd phase of 7th moon of autumn in 4th cycle
+
+The dash acts as a wildcard indicating the beginning moment of whatever period you're referencing, making it easy to denote significant astronomical transitions.
 
 ## What celestial bodies does the Observatory track?
 
@@ -42,7 +47,7 @@ At the heart of the Observatory are two celestial bodies and a special astronomi
 
 - **Bitcoin Moon**: Waxing and waning every 4,032 blocks (approximately 4 weeks in Roman calendar time), our virtual moon creates a lunar calendar that guides daily operations. Bitcoin's very first block (block 0) marks a full moon, and each cycle brings 13 named moons, from the Orange Moon to the Satoshi's Moon.
 
-- **Bitcoin Sun**: Operating on a grander scale, our virtual sun completes its cycle every 210,000 blocks - exactly one Bitcoin "halving" period (approximately 4 years). During a halving, Bitcoin's block rewards are cut in half, making new Bitcoin more scarce. This solar cycle creates our seasons, with each phase lasting 52,500 blocks. The halving events mark our spring equinoxes, creating a natural rhythm that has historically aligned with Bitcoin's price cycles.
+- **Bitcoin Sun**: Operating on a grander scale, our virtual sun completes its cycle every 210,000 blocks - exactly one Bitcoin "halving" period (approximately 4 years). During a halving, Bitcoin's block rewards are cut in half, making new Bitcoin more scarce. This solar cycle creates our seasons, with each phase lasting 52,500 blocks. The halving events mark our spring equinoxes, creating a natural rhythm.
 
 - **Eclipses**: These special astronomical events occur at the midpoint of each season, marking moments when the Bitcoin Moon crosses the Bitcoin Sun. These events create three types of eclipses - Total during New Moon, Annular during Full Moon, and Partial during all other phases - adding another layer of temporal significance to our system.
 
@@ -113,7 +118,7 @@ Position in sequence: 25 % 13 = 12 → ₿ Satoshi's Moon
 
 ## How does the Bitcoin Sun cycle work?
 
-Our Bitcoin Sun operates on a grander scale, completing its cycle every 210,000 blocks - exactly one Bitcoin halving period (approximately 4 years). Bitcoin halvings are significant events where the rewards given to miners are cut in half, making new Bitcoin more scarce. This solar cycle creates our seasons, with each phase lasting exactly 52,500 blocks. The halving events mark our spring equinoxes, creating a natural rhythm that has historically aligned with Bitcoin's price cycles.
+Our Bitcoin Sun operates on a grander scale, completing its cycle every 210,000 blocks - exactly one Bitcoin halving period (approximately 4 years). Bitcoin halvings are significant events where the rewards given to miners are cut in half, making new Bitcoin more scarce. This solar cycle creates our seasons, with each phase lasting exactly 52,500 blocks. The halving events mark our spring equinoxes, creating a natural rhythm.
 
 ### How do I calculate the current season?
 
@@ -170,45 +175,6 @@ Quarter: 13,440 ÷ 13,125 = 1.02 → Quarter 1 (Second Quarter)
 | Third Quarter (26,250-39,374 blocks) |
 | Fourth Quarter (39,375-52,499 blocks) |
 
-## How do I read Observatory dates?
-
-The Observatory uses a precise 5-part date format to pinpoint any moment in Bitcoin time:
-
-**Format**: `Solar Cycle | Season | Moon Number | Moon Phase | Blocks Into Phase`
-
-**Example**: `4|2|4|1|430` means:
-- **4** = 4th Solar Cycle (4th Bitcoin halving period)
-- **2** = 2nd Season (Summer 🌞)
-- **4** = 4th Moon of the season (Whale Moon 🐳)
-- **1** = 1st Phase (Full Moon 🌕)
-- **430** = 430 blocks into the current phase
-
-### How do I calculate each part of the date?
-
-1. **Solar Cycle**: `floor(current_block ÷ 210000)`
-2. **Season**: `floor((current_block % 210000) ÷ 52500)`
-3. **Moon Number**: `floor(((current_block % 210000) % 52500) ÷ 4032) + 1`
-4. **Moon Phase**: `floor((current_block % 4032) ÷ 504)`
-5. **Blocks Into Phase**: `current_block % 504`
-
-**Example**: Block 903,598
-```
-Solar Cycle: floor(903,598 ÷ 210,000) = 4
-Season: floor((903,598 % 210,000) ÷ 52,500) = floor(63,598 ÷ 52,500) = 1 (Summer)
-Moon Number: floor((63,598 % 52,500) ÷ 4,032) + 1 = floor(11,098 ÷ 4,032) + 1 = 3 + 1 = 4
-Moon Phase: floor((903,598 % 4,032) ÷ 504) = floor(430 ÷ 504) = 0 (Full Moon)
-Blocks Into Phase: 903,598 % 504 = 430
-Result: 4|1|4|0|430
-```
-
-### What's the emoji format?
-
-For more advanced users of the calendar system, the three middle numbers can be elegantly represented with emojis:
-- `4|2|4|1|430` becomes `4🌞🐳🌕430`
-- Season (🌞), Moon Name (🐳), and Phase (🌕) replace their numeric counterparts
-
-This system allows precise navigation through Bitcoin's temporal landscape, from the grand scale of halving cycles down to individual blocks within a moon phase. The emoji format provides an intuitive, visual way to read Bitcoin time at a glance.
-
 ## What are eclipses and when do they happen?
 
 Eclipses are special celestial events that occur at the midpoint of each Bitcoin Season - exactly 26,250 blocks after each season begins. These eclipse events happen at blocks 26,250, 78,750, 131,250, 183,750, and continue this pattern, creating special celestial moments that punctuate the middle of each seasonal period.
@@ -220,6 +186,12 @@ Eclipses are special celestial events that occur at the midpoint of each Bitcoin
 | Total Eclipse | 🌑 (New Moon) | Complete alignment of Bitcoin Moon and Bitcoin Sun |
 | Annular Eclipse | 🌕 (Full Moon) | Bitcoin Moon appears smaller than the Bitcoin Sun |
 | Partial Eclipse | All other phases | Partial alignment of Bitcoin Moon and Bitcoin Sun |
+
+## How does it work?
+
+Every ~10 minutes, Bitcoin creates a new "block" containing transaction records and cryptographic proofs. The Observatory transforms this steady blockchain rhythm into virtual celestial cycles - a Bitcoin Moon (4,032 blocks) and Bitcoin Sun (210,000 blocks) - creating an astronomical calendar synchronized with Bitcoin's natural timing.
+
+**This is powered by [Telescope](https://github.com/joinnextblock/telescope)**, a TypeScript library that provides the mathematical foundation for all astronomical calculations, requiring no external data sources.
 
 ## How does the Observatory determine atmospheric conditions?
 
@@ -264,12 +236,6 @@ This creates a living, breathing atmospheric system where:
 - **Network efficiency** directly affects **sky clarity**
 - **Each block** brings new **observational conditions**
 - **The Observatory's view** of celestial events changes based on **real Bitcoin network performance**
-
-## What's the historical significance of this system?
-
-In the history of Bitcoin, price trends have often mirrored the virtual seasons of this system: Bitcoin price has historically peaked during the "summer" phase (following the halving) and has tended to drop or consolidate during the "winter" phase (leading up to the next halving).
-
-The mathematical relationships between season starts, eclipse midpoints, and halving events create a rich temporal structure where each type of event has its own significance. This deterministic system requires no external data sources while providing users with multiple layers of meaningful time markers that transform blockchain progression into an intuitive astronomical narrative.
 
 ---
 
