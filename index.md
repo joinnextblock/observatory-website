@@ -9,7 +9,7 @@ title: Observatory
 
 [The Observatory](https://njump.me/npub1qqpd7c77267rxcxfshczek2da8js40c9srvtaexyfz5hma27r0kq8lduyl) is [NextBlock City's](https://njump.me/npub17vscfmnmshfdw68llhduxtr4h0kkmyhzm4phzs40t3gqsmguz7lsak66ne)  celestial timekeeper, synchronizing our digital metropolis with the Bitcoin blockchain. Like an ancient astronomical observatory that tracked the movements of stars and planets, our Observatory tracks the rhythm of Bitcoin blocks, creating a unique temporal system that guides the city's operations.
 
-**Using the Bitcoin blockchain as our foundation, we manifest virtual celestial bodies - a Bitcoin Moon and Bitcoin Sun - that orbit over our virtual city, creating a living astronomical system that responds to real blockchain events.**
+**Using the Bitcoin blockchain as our foundation, we manifest virtual celestial bodies - a Bitcoin Moon and Bitcoin Sun - that orbit over our virtual city, creating a living astronomical system that responds to real blockchain events. This system creates precise timestamps like `4🌞🐳🌕430` that capture exact moments in Bitcoin time, from solar cycles and seasons down to individual blocks within a moon phase.**
 
 ## How does it work?
 
