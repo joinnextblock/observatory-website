@@ -9,7 +9,7 @@ title: Observatory
 
 [The Observatory](https://njump.me/npub1qqpd7c77267rxcxfshczek2da8js40c9srvtaexyfz5hma27r0kq8lduyl) is [NextBlock City's](https://njump.me/npub17vscfmnmshfdw68llhduxtr4h0kkmyhzm4phzs40t3gqsmguz7lsak66ne) timekeeper that turns Bitcoin's blockchain into an astronomical calendar. 
 
-Bitcoin creates a new "block" roughly every 10 minutes - like pages in a digital ledger recording transactions worldwide. The Observatory takes this steady rhythm and transforms it into virtual celestial bodies: a Bitcoin Moon that cycles every 4,032 blocks and a Bitcoin Sun that completes seasons every 210,000 blocks.
+The Bitcoin protocol creates a new "block" roughly every 10 minutes - like pages in a digital ledger recording transactions worldwide. The Observatory takes this steady rhythm and transforms it into virtual celestial bodies: a Bitcoin Moon that cycles every 4,032 blocks and a Bitcoin Sun that completes seasons every 210,000 blocks.
 
 This creates a unique time system that produces timestamps like `4|2|4|1|430` - capturing everything from major Bitcoin cycles down to the exact block within a moon phase. Instead of arbitrary calendar dates, time flows with Bitcoin's natural rhythms.
 
