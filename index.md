@@ -168,6 +168,45 @@ Quarter: 13,440 ÷ 13,125 = 1.02 → Quarter 1 (Second Quarter)
 | Third Quarter (26,250-39,374 blocks) |
 | Fourth Quarter (39,375-52,499 blocks) |
 
+## How do I read Observatory dates?
+
+The Observatory uses a precise 5-part date format to pinpoint any moment in Bitcoin time:
+
+**Format**: `Solar Cycle | Season | Moon Number | Moon Phase | Blocks Into Phase`
+
+**Example**: `4|2|4|1|430` means:
+- **4** = 4th Solar Cycle (4th Bitcoin halving period)
+- **2** = 2nd Season (Summer 🌞)
+- **4** = 4th Moon of the season (Whale Moon 🐳)
+- **1** = 1st Phase (Full Moon 🌕)
+- **430** = 430 blocks into the current phase
+
+### How do I calculate each part of the date?
+
+1. **Solar Cycle**: `floor(current_block ÷ 210000)`
+2. **Season**: `floor((current_block % 210000) ÷ 52500)`
+3. **Moon Number**: `floor(((current_block % 210000) % 52500) ÷ 4032) + 1`
+4. **Moon Phase**: `floor((current_block % 4032) ÷ 504)`
+5. **Blocks Into Phase**: `current_block % 504`
+
+**Example**: Block 903,598
+```
+Solar Cycle: floor(903,598 ÷ 210,000) = 4
+Season: floor((903,598 % 210,000) ÷ 52,500) = floor(63,598 ÷ 52,500) = 1 (Summer)
+Moon Number: floor((63,598 % 52,500) ÷ 4,032) + 1 = floor(11,098 ÷ 4,032) + 1 = 3 + 1 = 4
+Moon Phase: floor((903,598 % 4,032) ÷ 504) = floor(430 ÷ 504) = 0 (Full Moon)
+Blocks Into Phase: 903,598 % 504 = 430
+Result: 4|1|4|0|430
+```
+
+### What's the emoji format?
+
+For more advanced users of the calendar system, the three middle numbers can be elegantly represented with emojis:
+- `4|2|4|1|430` becomes `4🌞🐳🌕430`
+- Season (🌞), Moon Name (🐳), and Phase (🌕) replace their numeric counterparts
+
+This system allows precise navigation through Bitcoin's temporal landscape, from the grand scale of halving cycles down to individual blocks within a moon phase. The emoji format provides an intuitive, visual way to read Bitcoin time at a glance.
+
 ## What are eclipses and when do they happen?
 
 Eclipses are special celestial events that occur at the midpoint of each Bitcoin Season - exactly 26,250 blocks after each season begins. These eclipse events happen at blocks 26,250, 78,750, 131,250, 183,750, and continue this pattern, creating special celestial moments that punctuate the middle of each seasonal period.
