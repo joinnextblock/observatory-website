@@ -3,7 +3,7 @@ layout: home
 title: Observatory
 ---
 
-# The Observatory: Frequently Asked Questions
+# NextBlock City: Observatory F.A.Q.
 
 ## What is the Observatory?
 
