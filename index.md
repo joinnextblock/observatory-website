@@ -73,7 +73,29 @@ Format: `AG_{halving}_{season}_{moon}_{position_in_cycle}`
 - Spring tides: New/Full Moon phases
 - Neap tides: Quarter Moon phases
 
-**Calculation**: `tidal_event = floor((block_height % 4032) / 96)`
+### Tide Phases
+
+Tide height follows an 84-block cycle. Phases are mapped to the height range:
+
+**Tide Height Pattern** (84-block cycle):
+- Blocks 0-42: +21 to -21 (42 blocks)
+- Blocks 42-84: -21 to +21 (42 blocks)
+- Repeats every 84 blocks
+
+**Tide Phases** (mapped to 84-block height cycle):
+
+| Emoji | Phase | Height Range | Block Range (84-block cycle) |
+|-------|-------|--------------|-----------------------------|
+| 🌊 | Peak High | +21 | 0 |
+| 🌊⬇️ | Falling | +20 to 0 | 1-21 |
+| 🏖️⬇️ | Falling | 0 to -20 | 22-41 |
+| 🏖️ | Peak Low | -21 | 42 |
+| 🏖️⬆️ | Rising | -20 to 0 | 43-63 |
+| 🌊⬆️ | Rising | 0 to +20 | 64-83 |
+
+**Maximum values**: Height reaches +21 at blocks 0, 84, 168... Height reaches -21 at blocks 42, 126, 210...
+
+**Calculation**: `position_in_84 = block_height % 84`, `tide_height = (position_in_84 <= 42) ? (21 - position_in_84) : (-21 + (position_in_84 - 42))`
 
 ## Atmospheric Conditions
 
