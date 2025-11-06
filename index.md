@@ -3,7 +3,7 @@ layout: home
 title: Observatory
 ---
 
-# NextBlock City: Observatory
+# The Observatory as NextBlock City
 
 [The Observatory](https://njump.me/npub1qqpd7c77267rxcxfshczek2da8js40c9srvtaexyfz5hma27r0kq8lduyl) is [NextBlock City's](https://njump.me/npub17vscfmnmshfdw68llhduxtr4h0kkmyhzm4phzs40t3gqsmguz7lsak66ne) timekeeper that turns Bitcoin's blockchain into an astronomical calendar.
 
@@ -114,9 +114,12 @@ Based on transaction efficiency (tx per full block equivalent):
 ## Eclipses
 
 Occur at season midpoints (blocks 26,250, 78,750, 131,250, 183,750):
-- **Total Eclipse**: New Moon phase
-- **Annular Eclipse**: Full Moon phase  
-- **Partial Eclipse**: All other phases
+
+| Emoji | Type | Moon Phase | Description |
+|-------|------|------------|-------------|
+| 🌚 | Total Eclipse | New Moon | Moon completely blocks the sun |
+| 🌝 | Annular Eclipse | Full Moon | Moon appears smaller, ring visible |
+| 🌞 | Partial Eclipse | All other phases | Moon partially covers the sun |
 
 ---
 
