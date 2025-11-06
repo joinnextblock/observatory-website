@@ -75,27 +75,25 @@ Format: `AG_{halving}_{season}_{moon}_{position_in_cycle}`
 
 ### Tide Phases
 
-Tide height follows an 84-block cycle. Phases are mapped to the height range:
+Tide height follows a 42-block cycle pattern:
 
-**Tide Height Pattern** (84-block cycle):
-- Blocks 0-42: +21 to -21 (42 blocks)
-- Blocks 42-84: -21 to +21 (42 blocks)
-- Repeats every 84 blocks
+**Tide Height Pattern** (42-block cycle):
+- Blocks 0-42: +21 to -21 (42 blocks) 
+- Next 42 blocks: -21 to +21 (42 blocks)
+- Pattern repeats every 42 blocks
 
-**Tide Phases** (mapped to 84-block height cycle):
+**Tide Phases** (mapped to 42-block height cycle):
 
-| Emoji | Phase | Height Range | Block Range (84-block cycle) |
+| Emoji | Phase | Height Range | Block Range (42-block cycle) |
 |-------|-------|--------------|-----------------------------|
 | 🌊 | Peak High | +21 | 0 |
 | 🌊⬇️ | Falling | +20 to 0 | 1-21 |
 | 🏖️⬇️ | Falling | 0 to -20 | 22-41 |
-| 🏖️ | Peak Low | -21 | 42 |
-| 🏖️⬆️ | Rising | -20 to 0 | 43-63 |
-| 🌊⬆️ | Rising | 0 to +20 | 64-83 |
+| 🏖️ | Peak Low | -21 | 42 (start of next cycle) |
 
-**Maximum values**: Height reaches +21 at blocks 0, 84, 168... Height reaches -21 at blocks 42, 126, 210...
+**Maximum values**: Height reaches +21 at blocks 0, 42, 84, 126... Height reaches -21 at blocks 42, 84, 126, 168...
 
-**Calculation**: `position_in_84 = block_height % 84`, `tide_height = (position_in_84 <= 42) ? (21 - position_in_84) : (-21 + (position_in_84 - 42))`
+**Calculation**: `position_in_42 = block_height % 42`, `tide_height = 21 - position_in_42` (for first half, then reverses for second half)
 
 ## Atmospheric Conditions
 
