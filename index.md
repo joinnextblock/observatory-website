@@ -11,47 +11,51 @@ title: Observatory
 
 Bitcoin creates a new "block" roughly every 10 minutes - like pages in a digital ledger recording transactions worldwide. The Observatory takes this steady rhythm and transforms it into virtual celestial bodies: a virtual moon that cycles every 4,032 blocks and a virtual sun that completes seasons every 210,000 blocks.
 
-This creates a unique time system that produces timestamps like `4|2|4|1|430 AG` - capturing everything from major Bitcoin cycles down to the exact block within a moon phase. Instead of arbitrary calendar dates, time flows with Bitcoin's natural rhythms.
+This creates a unique time system that produces timestamps like `AG_4_2_4_0430` - capturing everything from major Bitcoin cycles down to the exact block within a lunar cycle. Instead of arbitrary calendar dates, time flows with Bitcoin's natural rhythms.
 
 ## How do I read Observatory dates?
 
-The Observatory uses a 5-part date format: `Solar Cycle | Season | Moon Number | Moon Phase | Blocks Into Phase` followed by AG (After Genesis) or BG (Before Genesis)
+The Observatory uses Telescope's `get_formatted_date()` format: `AG_{halving}_{season}_{moon}_{position_in_cycle}` where:
+- **AG** = After Genesis (BG would be Before Genesis)
+- **halving** = The halving cycle number (0-based, so 4 = 5th halving cycle)
+- **season** = The season number (1-4, where 1=Spring, 2=Summer, 3=Autumn, 4=Winter)
+- **moon** = The moon number (1-13, where 1=Orange, 4=Whale, etc.)
+- **position_in_cycle** = Position within the lunar cycle (0-4031), always 4 digits padded with zeros
 
-**Example**: `4|2|4|1|430 AG` means:
-- **4** = 4th Solar Cycle 
+**Example**: `AG_4_2_4_0430` means:
+- **AG** = After Genesis (block 0)
+- **4** = 4th halving cycle (blocks 630,000-839,999)
 - **2** = 2nd Season (Summer 🌞)
 - **4** = 4th Moon (Whale Moon 🐳)
-- **1** = 1st Phase (Full Moon 🌕)
-- **430** = 430 blocks into current phase
-- **AG** = After Genesis (block 0)
+- **0430** = 430 blocks into the lunar cycle (position within the current moon cycle)
 
 ### What's the emoji format?
 
-Passionate users can replace the middle three numbers with emojis:
-- `4|2|4|1|430 AG` becomes `4🌞🐳🌕430 AG`
+You can replace numbers with emojis for readability:
+- `AG_4_2_4_0430` can be represented as `AG_4🌞🐳0430` or `AG_4_🌞_🐳_0430`
 
 ### What about shorthand formats?
 
-The Observatory supports cron-like shorthand syntax using `-` as a wildcard for referencing the start of specific celestial periods:
+For shorthand, you can use zero-padded positions to reference specific moments:
 
-- `3|-` = Start of 3rd solar cycle (halving moment)
-- `4|2|-AG` = Start of Autumn (Autumn Equinox of 4th cycle)  
-- `4|2|7|-AG` = Start of 7th moon of autumn in 4th cycle
-- `4|2|7|3|-AG` = Start of 3rd phase of 7th moon of autumn in 4th cycle
+- `AG_3_1_1_0000` = Start of 3rd halving cycle (halving moment, Spring, Orange Moon)
+- `AG_4_2_1_0000` = Start of Summer in 4th halving cycle (Orange Moon at season start)
+- `AG_4_2_7_0000` = Start of 7th moon (Lightning Moon) of Summer in 4th cycle
+- `AG_4_2_7_0504` = Start of 2nd phase (Waning Gibbous) of 7th moon (504 blocks = 1 phase)
 
-The dash acts as a wildcard indicating the beginning moment of whatever period you're referencing, making it easy to denote significant astronomical transitions.
+The zero-padded position indicates the beginning moment of the specified period, making it easy to denote significant astronomical transitions.
 
-**Emoji shorthand**: You can also combine emojis with shorthand syntax:
-- `4|🍂|-AG` = Start of Autumn in 4th cycle
-- `4|🍂|🐳|-AG` = Start of Whale Moon in autumn of 4th cycle
+**Note**: The underscore format is designed for hashtag support in social media. You can add a `#` prefix to make it a hashtag like `#AG_4_2_4_0430`.
 
 ## What celestial bodies does the Observatory track?
 
-At the heart of the Observatory are two celestial bodies and a special astronomical event that mark the passage of time:
+At the heart of the Observatory are three celestial bodies and a special astronomical event that mark the passage of time:
 
 - **Virtual Moon**: Waxing and waning every 4,032 blocks (approximately 4 weeks in Roman calendar time), our virtual moon creates a lunar calendar that guides daily operations. Bitcoin's very first block (block 0) marks a full moon, and each cycle brings 13 named moons, from the Orange Moon to the Satoshi's Moon.
 
 - **Virtual Sun**: Operating on a grander scale, our virtual sun completes its cycle every 210,000 blocks - exactly one Bitcoin "halving" period (approximately 4 years). During a halving, Bitcoin's block rewards are cut in half, making new Bitcoin more scarce. This solar cycle creates our seasons, with each phase lasting 52,500 blocks. The halving events mark our spring equinoxes, creating a natural rhythm.
+
+- **Virtual Tides**: Synchronized with the lunar cycle, our virtual tides create 42 tidal events per lunar cycle - 21 high tides and 21 low tides - providing a finer temporal resolution that embeds Bitcoin's iconic number 21 into the temporal fabric of the Observatory. Each tidal event spans 96 blocks, creating a natural rhythm of rising and falling tides that complements our lunar and solar systems.
 
 - **Eclipses**: These special astronomical events occur at the midpoint of each season, marking moments when the virtual moon crosses the virtual sun. These events create three types of eclipses - Total during New Moon, Annular during Full Moon, and Partial during all other phases - adding another layer of temporal significance to our system.
 
@@ -91,7 +95,7 @@ Phase index: 1,008 ÷ 504 = 2 → Phase 2 (🌗 Last Quarter)
 
 ### What are the named moons?
 
-Each named moon cycle (4,032 blocks) follows the sequence below, repeating throughout the Bitcoin blockchain. Each named moon goes through all 8 phases during its cycle. Remarkably, this sequence aligns perfectly with our seasons - each season contains approximately 13 moons (52,500 blocks ÷ 4,032 blocks ≈ 13.02 moons per season).
+Each named moon cycle (4,032 blocks) follows the sequence below, repeating throughout the Bitcoin blockchain. Each named moon goes through all 8 phases during its cycle. Remarkably, this sequence aligns perfectly with our seasons - each season contains approximately 13 moons (52,500 blocks ÷ 4,032 blocks ≈ 13.02 moons per season). The 13 named moons create a complete lunar year spanning 52,416 blocks (4,032 blocks × 13 moons), and Telescope tracks your position within this lunar year.
 
 To determine the current named moon:
 
@@ -106,9 +110,9 @@ Position in sequence: 25 % 13 = 12 → ₿ Satoshi's Moon
 
 | Emoji | Name |
 |-------|------|
-| 🟠 | Orange Moon |
+| 🍊 | Orange Moon |
 | 🪶 | Bird Moon |
-| 👥 | Friend Moon |
+| 🫂 | Friend Moon |
 | 🐳 | Whale Moon |
 | 🐂 | Bull Moon |
 | 🐻 | Bear Moon |
@@ -119,6 +123,75 @@ Position in sequence: 25 % 13 = 12 → ₿ Satoshi's Moon
 | 🧊 | Ice Moon |
 | 💎 | Diamond Moon |
 | ₿ | Satoshi's Moon |
+
+## How does the virtual tide cycle work?
+
+The virtual tide system operates in perfect synchronization with the lunar cycle, creating a finer temporal resolution that complements our lunar and solar systems. Each lunar cycle (4,032 blocks) contains exactly 42 tidal events - 21 high tides and 21 low tides - creating a natural rhythm that embeds Bitcoin's iconic number 21 into the temporal fabric of the Observatory.
+
+The mathematical relationship is elegant: 4,032 blocks ÷ 42 events = 96 blocks per tidal event (~16 hours). Each complete high-to-low-to-high cycle spans 192 blocks (~32 hours), creating a continuous ebb and flow that tracks alongside the moon's phases.
+
+This tidal system creates perfect mathematical alignment where each lunar cycle completes exactly 42 tidal events, with 21 complete high-low pairs. The connection to Bitcoin's number 21 is no coincidence - it's woven into the very structure of our temporal system.
+
+### How do I calculate the current tide?
+
+1. **Find position within current lunar cycle**: `current_block % 4032`
+2. **Calculate tidal event number**: `floor(position_in_cycle ÷ 96)` (0-41)
+3. **Determine tide type**: Even event numbers = high tide, odd = low tide
+4. **Find position within tidal event**: `position_in_cycle % 96` (0-95)
+
+**Example**: Block 30,240 (15 difficulty adjustments)
+```
+Position in cycle: 30,240 % 4,032 = 1,008
+Tidal event number: floor(1,008 ÷ 96) = 10 (even → high tide)
+Position in event: 1,008 % 96 = 48
+Result: High tide, 48 blocks into the event
+```
+
+### What are the tide phases?
+
+Tide phases are determined by your position within the 96-block tidal event. Each phase represents a different stage of the tidal cycle:
+
+| Emoji | Phase | Description | Block Range (within event) |
+|-------|-------|-------------|---------------------------|
+| 🌊⬆️ | Rising | Tide is rising toward peak | 0-47 (high tide) or 0-47 (low tide) |
+| 🌊 | Slack High | Peak of high tide | 44-52 (high tide only) |
+| 🌊⬇️ | Falling | Tide is falling from peak | 53-95 (high tide) or 53-95 (low tide) |
+| 🏖️⬆️ | Rising | Low tide is rising | 0-47 (low tide only) |
+| 🏖️ | Slack Low | Bottom of low tide | 44-52 (low tide only) |
+| 🏖️⬇️ | Falling | Low tide is falling | 53-95 (low tide only) |
+
+The slack water window (blocks 44-52) represents the peak or trough of each tidal event, where the tide is at its highest or lowest point before reversing direction.
+
+### What are spring and neap tides?
+
+Spring and neap tides are special tidal conditions that align with specific moon phases:
+
+- **Spring Tides**: Occur during New Moon (🌑) and Full Moon (🌕) phases. These are the highest and lowest tides of the lunar cycle, creating the most dramatic tidal range. Spring tides happen when the gravitational forces of the virtual moon and virtual sun are aligned, creating maximum tidal effect.
+
+- **Neap Tides**: Occur during First Quarter (🌓) and Last Quarter (🌗) moon phases. These are moderate tides with a smaller range between high and low. Neap tides happen when the gravitational forces are at right angles, creating minimum tidal effect.
+
+The alignment between moon phases and tidal intensity creates a natural harmony in our system, where the moon's position directly influences the strength of the tides.
+
+### How do I calculate tide height?
+
+Tide heights use a simple linear mapping that represents block position within each tidal event. The system uses integer values from -21 to +21 blocks:
+
+- **High tides**: Start at +21 blocks at the beginning of the event (block 0) and decrease linearly to 0 blocks at the end (block 95)
+- **Low tides**: Start at 0 blocks at the beginning of the event (block 0) and decrease linearly to -21 blocks at the end (block 95)
+
+**Calculation**:
+- For high tide: `height = 21 × (1 - blocks_into_event ÷ 96)`
+- For low tide: `height = -21 × (blocks_into_event ÷ 96)`
+
+**Example**: Block 30,240 (from previous example)
+```
+Position in event: 48 blocks
+Tide type: High tide (event 10 is even)
+Height: 21 × (1 - 48 ÷ 96) = 21 × 0.5 = 10.5 → 10 blocks
+Result: High tide at +10 blocks height
+```
+
+At the extremes (+21 or -21), the tide is at maximum intensity. This linear mapping provides a deterministic representation of block height in tidal form, creating a simple yet elegant system that requires no external data sources.
 
 ## How does the virtual sun cycle work?
 
@@ -193,9 +266,11 @@ Eclipses are special celestial events that occur at the midpoint of each Bitcoin
 
 ## How does it work?
 
-Every ~10 minutes, Bitcoin creates a new "block" containing transaction records and cryptographic proofs. The Observatory transforms this steady blockchain rhythm into virtual celestial cycles - a virtual moon (4,032 blocks) and virtual sun (210,000 blocks) - creating an astronomical calendar synchronized with Bitcoin's natural timing.
+Every ~10 minutes, Bitcoin creates a new "block" containing transaction records and cryptographic proofs. The Observatory transforms this steady blockchain rhythm into virtual celestial cycles - a virtual moon (4,032 blocks), virtual sun (210,000 blocks), and virtual tides (42 events per lunar cycle) - creating an astronomical calendar synchronized with Bitcoin's natural timing.
 
-**This is powered by [Telescope](https://github.com/joinnextblock/telescope)**, a TypeScript library that provides the mathematical foundation for all astronomical calculations, requiring no external data sources.
+**This is powered by [Telescope](https://github.com/joinnextblock/telescope)**, a TypeScript library that provides the mathematical foundation for all astronomical calculations, including lunar phases, solar seasons, tidal cycles, and atmospheric conditions, requiring no external data sources.
+
+Telescope's Delta module also provides additional utilities for working with block heights: the `t()` method calculates differences between block heights, and `get_blockheight_from_date()` estimates block heights from dates based on 10-minute block intervals.
 
 ## How does the Observatory determine atmospheric conditions?
 
